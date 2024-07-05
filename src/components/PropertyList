@@ -1,0 +1,43 @@
+// src/components/PropertyList.tsx
+import React from 'react';
+import PropertyCard from './PropertyCard';
+
+const properties = [
+  {
+    image: 'path/to/image1.jpg',
+    price: '£1,450 pcm',
+    pricePerWeek: '£335 pw',
+    beds: 2,
+    baths: 2,
+    receptions: 1,
+    description: '2 bed flat to rent...',
+    listedDate: '19th Jun 2024',
+    availableDate: '31st Jul 2024',
+    agentName: 'Haslams'
+  },
+  {
+    image: 'path/to/image2.jpg',
+    price: '£1,725 pcm',
+    pricePerWeek: '£398 pw',
+    beds: 2,
+    baths: 2,
+    receptions: 1,
+    description: '2 bed flat to rent...',
+    listedDate: '28th Jun 2024',
+    availableDate: '2nd Sep 2024',
+    agentName: 'Haslams'
+  }
+  // Add more properties as needed
+];
+
+const PropertyList: React.FC = () => {
+  return (
+    <div>
+      {properties.map((property, index) => (
+        <PropertyCard key={index} {...property} />
+      ))}
+    </div>
+  );
+};
+
+export default PropertyList;
