@@ -53,7 +53,7 @@ const Description = styled.p`
 
 const Details = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   margin-top: 8px;
 `;
@@ -63,6 +63,7 @@ const Detail = styled.div`
   align-items: center;
   font-size: 0.9em;
   color: #999;
+  padding: 10px;
 `;
 
 const PropertyCard: React.FC< PropertyCardProps>  = ({

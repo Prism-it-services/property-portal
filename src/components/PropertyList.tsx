@@ -1,6 +1,16 @@
 // src/components/PropertyList.tsx
 import React from 'react';
 import PropertyCard from './PropertyCard';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+
+`;
+
+
 
 const properties = [
   {
@@ -69,11 +79,11 @@ const properties = [
 export  const PropertyList  = () => {
   return (
     
-    <div>
+    <Container>
       {properties.map((property, index) => (
         <PropertyCard key={index} {...property} />
       ))}
-    </div>
+    </Container>
     
   );
 };
