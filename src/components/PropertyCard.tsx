@@ -65,7 +65,7 @@ const Detail = styled.div`
   color: #999;
 `;
 
-const PropertyCard: React.FC<PropertyCardProps> = ({
+const PropertyCard: React.FC< PropertyCardProps>  = ({
   image,
   price,
   pricePerWeek,
