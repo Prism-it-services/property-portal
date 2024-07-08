@@ -1,8 +1,10 @@
 // src/components/PropertyCard.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface PropertyCardProps {
+  id: number;
   image: string;
   price: string;
   pricePerWeek: string;
@@ -15,13 +17,18 @@ interface PropertyCardProps {
   agentName: string;
 }
 
-const Card = styled.div`
+const Card = styled(Link)`
   display: flex;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Image = styled.img`
@@ -67,6 +74,7 @@ const Detail = styled.div`
 `;
 
 const PropertyCard: React.FC< PropertyCardProps>  = ({
+  id,
   image,
   price,
   pricePerWeek,
@@ -79,7 +87,7 @@ const PropertyCard: React.FC< PropertyCardProps>  = ({
   agentName
 }) => {
   return (
-    <Card>
+    <Card to={`/property/${id}`}>
       <Image src={image} alt="Property" />
       <Info>
         <Header>
