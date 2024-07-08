@@ -14,6 +14,7 @@ const Container = styled.div`
 
 const properties = [
   {
+    id:1,
     image: '../../assets/house1.jpeg',
     price: '£1,450 pcm',
     pricePerWeek: '£335 pw',
@@ -26,6 +27,7 @@ const properties = [
     agentName: 'Haslams'
   },
   {
+    id:2,
     image: '../../assets/house2.jpeg',
     price: '£1,725 pcm',
     pricePerWeek: '£398 pw',
@@ -38,6 +40,7 @@ const properties = [
     agentName: 'Haslams'
   },
   {
+    id:3,
     image: '../../assets/house3.jpeg',
     price: '£1,900 pcm',
     pricePerWeek: '£498 pw',
@@ -50,6 +53,7 @@ const properties = [
     agentName: 'Prospect'
   },
   {
+    id:4,
     image: '../../assets/house4.jpeg',
     price: '£2,100 pcm',
     pricePerWeek: '600 pw',
@@ -62,6 +66,7 @@ const properties = [
     agentName: 'Avacado'
   },
   {
+    id:5,
     image: '../../assets/house5.jpeg',
     price: '£2,400 pcm',
     pricePerWeek: '700 pw',
@@ -81,7 +86,7 @@ export  const PropertyList  = () => {
     
     <Container>
       {properties.map((property, index) => (
-        <PropertyCard key={index} {...property} />
+        <PropertyCard key={property.id} {...property} />
       ))}
     </Container>
     
