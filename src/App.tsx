@@ -3,12 +3,14 @@ import './App.css';
 import GlobalStyle from './GlobalStyles';
 import { BrowserRouter,  Router, Route, Routes } from 'react-router-dom';
 import PropertyDetail  from './components/PropertyDetail';
+import { ApolloProvider} from '@apollo/client';
+import { client} from './graphqlApolloClient/apolloClient';
 
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <BrowserRouter>
-    
     <GlobalStyle/>
     <div className="App">
      <h1>Welcome to property portal</h1>
@@ -17,8 +19,8 @@ function App() {
      <Route path="/property/:id" element ={<PropertyDetail/>} ></Route>
      </Routes>
     </div>
-    
     </BrowserRouter>
+    </ApolloProvider>
   );
 }
 
